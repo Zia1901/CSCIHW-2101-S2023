@@ -1,16 +1,24 @@
 package HW1;
-// Make a method that accepts a string an integer and a char and will return the string with the char
-// replaced at the integer given
-// charReplace("I MAKE BREAD",2,T)
-// EX: I MAKE BREAD, 2, T
-//     I TAKE BREAD
-// remember computer counting starts at 0:
-// HELLO
-// 01234
 public class Replace {
-    public String charReplace(String s, int x, char z) {
-        return null;
-        
+    public static String charReplace(String str, int index, char ch) {
+        if (index < 0 || index >= str.length()) {
+            // index is out of bounds, return the original string
+            return str;
+        } else {
+            // replace the character at the specified index
+            char[] chars = str.toCharArray();
+            chars[index] = ch;
+            return new String(chars);
+        }
     }
-    
+
+    public static void main(String[] args) {
+        String str = "I MAKE BREAD";
+        int index = 2;
+        char ch = 'T';
+
+        String newStr = charReplace(str, index, ch);
+
+        System.out.println(newStr);
+    }
 }
