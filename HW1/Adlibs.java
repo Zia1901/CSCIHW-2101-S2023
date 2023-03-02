@@ -1,11 +1,24 @@
 package HW1;
-// make a method that accepts 2 Strings and 1 int (Someones name, age, and favorite color and then returns a story about them)
-// Hint1: The objects name is Adlibs and you require a name age and favoriteColor all in strings
-// Hint2: You will need to return a string. You can concat the variables and the strings together
-// Hint3: A sample story if you are lost can be as simple as "Hello! My name is ____, and I am ____, and my favorite  
-//        color is ___"
+import java.util.Scanner;
+
 public class Adlibs {
-    public  String story(String name, int age, String favoriteColor) {
-        return null;
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter a noun: ");
+        String noun1 = scanner.nextLine();
+        
+        System.out.print("Enter an adjective: ");
+        String adjective1 = scanner.nextLine();
+        
+        System.out.print("Enter a number: ");
+        int number1 = scanner.nextInt();
+        scanner.nextLine(); // Consume the newline character
+        
+        System.out.print("Enter another noun: ");
+        String noun2 = scanner.nextLine();
+        
+        System.out.println("One day, a " + noun1 + " was walking down the street, feeling very " + adjective1 + ". Suddenly, " + number1 + " " + noun2 + " appeared out of nowhere and started chasing the " + noun1 + "!");
     }
 }
+
