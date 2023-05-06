@@ -10,6 +10,8 @@ public class BankAccountTester {
 
         System.out.println(yourAccount.name);
 
+        BankAccount secondAccount = new BankAccount("Sokka", 2345678, 5000, 102, "01/01/2001");
+
         System.out.println(yourAccount.getbalance());
         System.out.println(yourAccount.getdob());
         System.out.println(yourAccount.getssn());
@@ -28,18 +30,11 @@ public class BankAccountTester {
         System.out.println(myAccount.getaccountNumber());
         System.out.println("===========");
         System.out.println(myAccount.getbalance());
-        // myAccount.balance = 1000000; // This does not work because balance is private
         myAccount.deposit(100);
         System.out.println(myAccount.getbalance());
 
-        // yourAccount.deposit(100);
         System.out.println(yourAccount.getbalance());
 
-        // int choice = BankAccount.menu();
-        // System.out.println(choice);
-
-        BankAccount.interact(yourAccount);
-        // BankAccount.interact(myAccount);
-
+        BankAccount.interact(yourAccount, secondAccount);
     }
 }
